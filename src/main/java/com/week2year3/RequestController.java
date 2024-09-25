@@ -1,10 +1,7 @@
 package com.week2year3;
 
 import com.fasterxml.jackson.core.sym.Name;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/person")
@@ -24,6 +21,12 @@ public String message2()
 {
     return "My name is " + name;
 }
+
+@GetMapping("/details")
+    public String info(@RequestParam String name1, @RequestParam String age)
+    {
+        return"I am " + name1 + "My age is " + age;
+    }
 
 
 
