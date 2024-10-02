@@ -27,7 +27,7 @@ public String message2()
     {
         return"I am " + name1 + "My age is " + age;
     }
-    @GetMapping("/Calculator")
+    @GetMapping("/calculator")
     public String calculator(@RequestParam float num1, @RequestParam (defaultValue = "0.0") float num2, String maths)
     {
         float total = 0;
